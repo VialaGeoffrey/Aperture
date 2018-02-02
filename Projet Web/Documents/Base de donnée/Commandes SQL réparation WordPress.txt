@@ -1,0 +1,8 @@
+#Commandes SQL pour le lancement de WordPress
+
+
+DROP USER 'user'@'localhost';
+
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'useraperture!';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+GRANT ALL PRIVILEGES ON `aperture`.* TO 'user'@'localhost';
